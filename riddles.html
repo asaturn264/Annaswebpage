@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Riddles - Anna's Website</title>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- CSS -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Page Background */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(90deg, #ffe6e9, #fef5f9, #ffe6e9);
+      background-size: 400% 400%;
+      animation: gradientBG 10s ease infinite;
+      color: #333;
+      margin: 0;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Navigation Bar */
+    #header {
+      background-color: #ffffff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .navmenu ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+    }
+
+    .navmenu ul li {
+      display: inline;
+    }
+
+    .navmenu ul li a {
+      text-decoration: none;
+      color: #d87093;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      padding: 10px 15px;
+      border-radius: 5px;
+    }
+
+    .navmenu ul li a:hover, .navmenu ul li a.active {
+      background-color: #ffe6e9;
+      color: #ffffff;
+    }
+
+    /* Riddle Container */
+    .riddle-container {
+      margin: 40px auto;
+      padding: 30px;
+      border-radius: 15px;
+      background-color: #fff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      max-width: 600px;
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    h1, h2 {
+      color: #d87093;
+    }
+
+    .btn-generate {
+      background-color: #ff6f61;
+      border: none;
+      color: #fff;
+      font-weight: bold;
+      border-radius: 50px;
+      padding: 10px 25px;
+      font-size: 16px;
+      margin: 5px;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn-generate:hover {
+      background-color: #ff8f80;
+      transform: scale(1.05);
+    }
+
+    .riddle-text, .answer-text {
+      font-size: 20px;
+      margin: 20px 0;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .riddle-text {
+      color: #444;
+    }
+
+    .answer-text {
+      font-weight: bold;
+      color: #666;
+      display: none;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #d87093;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      margin-top: 40px;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header with Navigation -->
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h1 class="sitename">Anna's Website</h1>
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="swimming.html">Swimming</a></li>
+          <li><a href="riddles.html" class="active">Riddles</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Riddle Generator -->
+  <main class="container mt-5">
+    <div class="riddle-container">
+      <h2>🤔 Can you solve this? 🤔</h2>
+      <p id="riddle" class="riddle-text" style="opacity: 1;">Click the button to generate a riddle!</p>
+      <p id="answer" class="answer-text">Answer will appear here!</p>
+      <button class="btn-generate" onclick="generateRiddle()">🔄 Generate Riddle</button>
+      <button class="btn-generate" onclick="showAnswer()">💡 Show Answer</button>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Anna's Website. All Rights Reserved.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Array of riddles and answers
+    const riddles = [
+      { riddle: "What has to be broken before you can use it? 🥚", answer: "An egg!" },
+      { riddle: "I’m tall when I’m young, and I’m short when I’m old. 🕯️", answer: "A candle!" },
+      { riddle: "What month of the year has 28 days? 📆", answer: "All of them!" },
+      { riddle: "What is full of holes but still holds water? 🧽", answer: "A sponge!" },
+      { riddle: "What question can you never answer yes to? 😴", answer: "Are you asleep yet?" },
+      { riddle: "What is always in front of you but can’t be seen? 👀", answer: "The future!" },
+      { riddle: "What can you keep after giving to someone? 💌", answer: "Your word!" }
+    ];
+
+    // Generate a random riddle
+    function generateRiddle() {
+      const randomIndex = Math.floor(Math.random() * riddles.length);
+      const randomRiddle = riddles[randomIndex];
+      document.getElementById("riddle").textContent = randomRiddle.riddle;
+      document.getElementById("answer").textContent = randomRiddle.answer;
+      document.getElementById("answer").style.display = "none"; // Hide the answer initially
+      document.getElementById("riddle").style.opacity = 1; // Reset riddle opacity
+    }
+
+    // Show the answer
+    function showAnswer() {
+      const answerElement = document.getElementById("answer");
+      answerElement.style.display = "block"; // Display answer
+      answerElement.style.opacity = 1; // Fade in
+    }
+  </script>
+</body>
+
+</html>

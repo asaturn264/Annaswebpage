@@ -1,0 +1,60 @@
+/* Custom stylesheet for swimming page */
+
+/* Global body styles */
+body {
+    font-family: 'Poppins', sans-serif; /* Elegant and modern sans-serif font */
+    color: #444; /* Neutral gray for text color */
+    background-color: #fef5f9; /* Soft pinkish-white for the background */
+  }
+  
+  /* Heading styles */
+  h1, h2 {
+    font-family: 'Playfair Display', serif; /* Sophisticated serif font for headings */
+    color: #d87093; /* Pale violet-red for headings */
+    text-align: center;
+  }
+  
+  /* Style for div blocks */
+  .div-block-1 {
+    background-color: #fff0f5; /* Lavender blush background */
+    padding: 20px;
+    border: 1px solid #d87093; /* Matching border color */
+    margin-bottom: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  .div-block-2 {
+    background-color: #f8f0ff; /* Light lavender background */
+    padding: 20px;
+    text-align: center;
+    border: 1px dashed #9370db; /* Medium purple dashed border */
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .div-block-3 {
+    background-color: #fdf5e6; /* Ivory background */
+    padding: 20px;
+    font-style: italic;
+    border-left: 5px solid #ffa07a; /* Light salmon-colored left border */
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Button styles */
+  .btn-primary {
+    background-color: #d87093; /* Pale violet-red */
+    border-color: #d87093;
+    color: #fff; /* White text */
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .btn-primary:hover {
+    background-color: #c75482; /* Slightly darker shade on hover */
+    border-color: #c75482;
+  }
+  

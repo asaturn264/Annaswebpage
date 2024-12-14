@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swimming - Anna's Website</title>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- CSS -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/custom_styles.css" rel="stylesheet">
+  <style>
+    /* Styles for this page */
+
+    /* Body styling */
+    #swimming-page {
+      background: url('assets/img/custom_background.avif') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+    }
+
+    /* Heading styles */
+    h1, h2 {
+      font-family: 'Playfair Display', serif;
+      color: #d87093; /* Soft pink */
+      text-align: center;
+    }
+
+    /* Div block styles */
+    .content-block {
+      padding: 20px;
+      margin-bottom: 40px;
+      border-radius: 10px;
+      background-color: #fff8f5; /* Soft peach */
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Button styles */
+    .btn-primary {
+      background-color: #d87093; /* Pink button */
+      border-color: #d87093;
+      color: #fff;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+
+    .btn-primary:hover {
+      background-color: #c75482;
+      border-color: #c75482;
+    }
+
+    /* Tableau container */
+    .tableau-container {
+      padding: 20px;
+      border-radius: 10px;
+      background-color: #fff5e6; /* Light cream */
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Image styling */
+    .img-fluid {
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+
+<body id="swimming-page">
+  <!-- Header -->
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h1 class="sitename">Anna's Website</h1>
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="swimming.html" class="active">Swimming</a></li>
+          <li><a href="riddles.html">Riddles</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Swimming Content -->
+  <main class="container mt-5">
+    <h1 class="mb-4">All About Swimming</h1>
+    <p class="text-center">Discover the world of swimming, from its health benefits to fascinating facts, helpful tutorials, and live insights.</p>
+
+    <!-- On-page Anchor -->
+    <div class="text-center mb-4">
+      <a href="#techniques" class="btn btn-primary">Jump to Techniques</a>
+    </div>
+
+    <!-- Video Section -->
+    <section class="content-block">
+      <h2>Watch a Swimming Tutorial</h2>
+      <p class="text-center">Learn freestyle techniques and tips from professional swimmers.</p>
+      <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/4QLRLeOeq3w" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- Informational Content -->
+    <section class="content-block">
+      <h2>Why Focus on Freestyle?</h2>
+      <p>Freestyle swimming is considered the fastest and most efficient swimming stroke. It emphasizes a strong core, streamlined body position, and effective breathing techniques.</p>
+    </section>
+
+    <!-- Tableau Visualization -->
+    <section class="content-block tableau-container">
+      <h2>Explore Live Swimming Insights</h2>
+      <p>Interact with this visualization to uncover swimming trends and performance statistics.</p>
+      <div class='tableauPlaceholder' id='viz1734144261062' style='position: relative;'>
+        <noscript>
+          <a href='#'>
+            <img alt='Swimming Insights' src='https://public.tableau.com/static/images/Sw/SwimmingInsights/SwimmingtheInsights/1_rss.png' style='border: none' />
+          </a>
+        </noscript>
+        <object class='tableauViz' style='display:none;'>
+          <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+          <param name='name' value='SwimmingInsights&#47;SwimmingtheInsights' />
+          <param name='tabs' value='no' />
+          <param name='toolbar' value='yes' />
+        </object>
+      </div>
+    </section>
+
+    <!-- Image Section -->
+    <section class="content-block">
+      <h2>Dive into Swimming</h2>
+      <p class="text-center">Enjoy the serene experience of swimming, whether for fitness or relaxation.</p>
+      <img src="assets/img/swimming_pool.jpg" alt="Swimming Pool" class="img-fluid mx-auto d-block">
+    </section>
+
+    <!-- Swimming Techniques Section -->
+    <section id="techniques" class="content-block">
+      <h2>Swimming Techniques</h2>
+      <ol>
+        <li>Freestyle
+          <ul>
+            <li>Fastest stroke</li>
+            <li>Uses flutter kicks</li>
+            <li>Great for endurance</li>
+          </ul>
+        </li>
+        <li>Backstroke
+          <ul>
+            <li>Relaxing stroke</li>
+            <li>Helps improve posture</li>
+            <li>Uses alternating arm motion</li>
+          </ul>
+        </li>
+        <li>Butterfly
+          <ul>
+            <li>Most challenging stroke</li>
+            <li>Builds upper body strength</li>
+            <li>Requires simultaneous arm movement</li>
+          </ul>
+        </li>
+        <li>Breaststroke
+          <ul>
+            <li>Slow but efficient</li>
+            <li>Ideal for beginners</li>
+            <li>Focuses on a frog-like kick</li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer text-center py-3">
+    <p>&copy; 2024 Anna's Website. All Rights Reserved.</p>
+  </footer>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script type='text/javascript'>
+    var divElement = document.getElementById('viz1734144261062');
+    var vizElement = divElement.getElementsByTagName('object')[0];
+    if (divElement.offsetWidth > 800) {
+      vizElement.style.width = '1000px';
+      vizElement.style.height = '1327px';
+    } else if (divElement.offsetWidth > 500) {
+      vizElement.style.width = '1000px';
+      vizElement.style.height = '1327px';
+    } else {
+      vizElement.style.width = '100%';
+      vizElement.style.height = '2377px';
+    }
+    var scriptElement = document.createElement('script');
+    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+  </script>
+</body>
+
+</html>
+
+
+
