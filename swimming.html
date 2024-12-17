@@ -1,241 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Swimming - Anna's Website</title>
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
-  <!-- CSS -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/css/main.css" rel="stylesheet">
-  <link href="assets/css/custom_styles.css" rel="stylesheet">
   <style>
-    /* Styles for this page */
-
-    /* Body styling */
-    #swimming-page {
-      background: url('assets/img/custom_background.avif') no-repeat center center fixed;
-      background-size: cover;
+    /* General Styling */
+    body {
       font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: url('https://via.placeholder.com/1920x1080') no-repeat center center fixed;
+      background-size: cover;
       color: #333;
     }
 
-    /* Header styling */
+    /* Header Styling */
     #header {
-      background-color: #f3c1d8; /* Soft pink */
-      border-bottom: 2px solid #d4739e;
+      background-color: #f3c1d8;
+      padding: 10px 0;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border-bottom: 2px solid #d4739e;
     }
 
     .sitename {
       font-family: 'Playfair Display', serif;
-      font-size: 2rem;
       color: #fff;
-    }
-
-    .navmenu ul {
-      list-style: none;
+      font-size: 2rem;
       margin: 0;
-      padding: 0;
-      display: flex;
+      text-align: center;
     }
 
-    .navmenu ul li {
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      margin: 10px 0 0;
+      padding: 0;
+    }
+
+    nav ul li {
       margin: 0 15px;
     }
 
-    .navmenu ul li a {
+    nav ul li a {
       color: #fff;
-      font-weight: 600;
-      font-family: 'Poppins', sans-serif;
       text-decoration: none;
+      font-weight: 600;
     }
 
-    .navmenu ul li a.active {
+    nav ul li a.active {
       color: #d4739e;
       font-weight: bold;
     }
 
-    .navmenu ul li a:hover {
-      text-decoration: underline;
+    /* Main Content */
+    main {
+      background-color: #fff8f5;
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
-    /* Heading styles */
-    h1, h2 {
+    h1 {
       font-family: 'Playfair Display', serif;
-      color: #d4739e; /* Soft pink */
       text-align: center;
+      color: #d4739e;
+      font-size: 2.5rem;
     }
 
     p.subtitle {
-      font-family: 'Poppins', sans-serif;
-      font-size: 1.1rem;
-      color: #555;
       text-align: center;
+      color: #555;
     }
 
     a.page-link {
       color: #d4739e;
-      font-weight: bold;
       text-decoration: none;
+      font-weight: bold;
     }
 
     a.page-link:hover {
       text-decoration: underline;
     }
 
-    /* Content block styles */
     .content-block {
+      margin-bottom: 30px;
       padding: 20px;
-      margin-bottom: 40px;
+      background-color: #fff;
       border-radius: 10px;
-      background-color: #fff8f5; /* Soft peach */
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
-    /* Button styles */
-    .btn-primary {
-      background-color: #d4739e; /* Pink button */
-      border-color: #d4739e;
+    iframe {
+      display: block;
+      margin: 0 auto;
+      border-radius: 10px;
+    }
+
+    ol li {
+      margin-bottom: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #f3c1d8;
       color: #fff;
       font-weight: bold;
-      border-radius: 5px;
-    }
-
-    .btn-primary:hover {
-      background-color: #c75482;
-      border-color: #c75482;
-    }
-
-    /* Tableau container */
-    .tableau-container {
-      padding: 20px;
-      border-radius: 10px;
-      background-color: #fff5e6; /* Light cream */
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    /* Image styling */
-    .img-fluid {
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
   </style>
 </head>
 
-<body id="swimming-page">
+<body>
   <!-- Header -->
-  <header id="header" class="header d-flex align-items-center sticky-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center">
-        <h1 class="sitename">Anna's Website</h1>
-      </a>
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="resume.html">Resume</a></li>
-          <li><a href="swimming.html" class="active">Swimming</a></li>
-          <li><a href="riddles.html">Riddles</a></li>
-        </ul>
-      </nav>
-    </div>
+  <header id="header">
+    <h1 class="sitename">Anna's Website</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="swimming.html" class="active">Swimming</a></li>
+        <li><a href="riddles.html">Riddles</a></li>
+      </ul>
+    </nav>
   </header>
 
   <!-- Main Content -->
-  <main class="container mt-5">
-    <!-- Page Heading -->
-    <h1 class="mb-3">All About Swimming</h1>
+  <main>
+    <h1>All About Swimming</h1>
     <p class="subtitle">
       Explore swimming techniques, benefits, and more while visiting my <a href="resume.html" class="page-link">Resume</a> and <a href="riddles.html" class="page-link">Riddles</a> pages!
     </p>
 
-    <!-- On-page Anchor -->
-    <div class="text-center mb-4">
-      <a href="#techniques" class="btn btn-primary">Jump to Techniques</a>
-    </div>
-
-    <!-- Video Section -->
+    <!-- Content Blocks -->
     <section class="content-block">
       <h2>Watch a Swimming Tutorial</h2>
-      <p class="text-center">Learn freestyle techniques and tips from professional swimmers.</p>
-      <div class="video-container text-center">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/4QLRLeOeq3w" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-      </div>
+      <p>Learn freestyle techniques and tips from professional swimmers.</p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/4QLRLeOeq3w" allowfullscreen></iframe>
     </section>
 
-    <!-- Informational Content -->
     <section class="content-block">
       <h2>Why Focus on Freestyle?</h2>
-      <p>Freestyle swimming is considered the fastest and most efficient swimming stroke. It emphasizes a strong core, streamlined body position, and effective breathing techniques.</p>
+      <p>Freestyle swimming is the fastest and most efficient stroke. It emphasizes strong core engagement, streamlined body position, and proper breathing techniques.</p>
     </section>
 
-    <!-- Tableau Visualization -->
-    <section class="content-block tableau-container">
-      <h2>Explore Live Swimming Insights</h2>
-      <p>Interact with this visualization to uncover swimming trends and performance statistics.</p>
-      <div class='tableauPlaceholder' id='viz1734144261062' style='position: relative;'>
-        <noscript>
-          <a href='#'>
-            <img alt='Swimming Insights' src='https://public.tableau.com/static/images/Sw/SwimmingInsights/SwimmingtheInsights/1_rss.png' style='border: none' />
-          </a>
-        </noscript>
-        <object class='tableauViz' style='display:none;'>
-          <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-          <param name='name' value='SwimmingInsights&#47;SwimmingtheInsights' />
-          <param name='tabs' value='no' />
-          <param name='toolbar' value='yes' />
-        </object>
-      </div>
-    </section>
-
-    <!-- Swimming Techniques -->
-    <section id="techniques" class="content-block">
+    <section class="content-block">
       <h2>Swimming Techniques</h2>
       <ol>
-        <li>Freestyle
-          <ul>
-            <li>Fastest stroke</li>
-            <li>Uses flutter kicks</li>
-            <li>Great for endurance</li>
-          </ul>
-        </li>
-        <li>Backstroke
-          <ul>
-            <li>Relaxing stroke</li>
-            <li>Helps improve posture</li>
-            <li>Uses alternating arm motion</li>
-          </ul>
-        </li>
-        <li>Butterfly
-          <ul>
-            <li>Most challenging stroke</li>
-            <li>Builds upper body strength</li>
-            <li>Requires simultaneous arm movement</li>
-          </ul>
-        </li>
-        <li>Breaststroke
-          <ul>
-            <li>Slow but efficient</li>
-            <li>Ideal for beginners</li>
-            <li>Focuses on a frog-like kick</li>
-          </ul>
-        </li>
+        <li>Freestyle</li>
+        <li>Backstroke</li>
+        <li>Butterfly</li>
+        <li>Breaststroke</li>
       </ol>
     </section>
   </main>
 
   <!-- Footer -->
-  <footer class="footer text-center py-3" style="background-color: #f3c1d8; color: #fff;">
-    <p>&copy; 2024 Anna's Website. All Rights Reserved.</p>
+  <footer>
+    &copy; 2024 Anna's Website. All Rights Reserved.
   </footer>
-
-  <!-- Bootstrap Bundle -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
+
 
 
 
