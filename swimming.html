@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Swimming - Anna's Website</title>
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <style>
     /* General Styling */
     body {
       font-family: 'Poppins', sans-serif;
       margin: 0;
-      background: url('https://via.placeholder.com/1920x1080') no-repeat center center fixed;
+      background: url('assets/img/custom_background.avif') no-repeat center center fixed;
       background-size: cover;
       color: #333;
     }
@@ -20,42 +23,41 @@
     #header {
       background-color: #f3c1d8;
       padding: 10px 0;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       border-bottom: 2px solid #d4739e;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
     .sitename {
       font-family: 'Playfair Display', serif;
-      color: #fff;
       font-size: 2rem;
+      color: #fff;
       margin: 0;
-      text-align: center;
     }
 
-    nav ul {
+    .navmenu ul {
+      list-style: none;
       display: flex;
       justify-content: center;
-      list-style: none;
-      margin: 10px 0 0;
       padding: 0;
+      margin: 0;
     }
 
-    nav ul li {
+    .navmenu ul li {
       margin: 0 15px;
     }
 
-    nav ul li a {
+    .navmenu ul li a {
       color: #fff;
-      text-decoration: none;
       font-weight: 600;
+      text-decoration: none;
     }
 
-    nav ul li a.active {
+    .navmenu ul li a.active {
       color: #d4739e;
       font-weight: bold;
     }
 
-    /* Main Content */
+    /* Page Content */
     main {
       background-color: #fff8f5;
       max-width: 900px;
@@ -65,33 +67,23 @@
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
-    h1 {
+    h1, h2 {
       font-family: 'Playfair Display', serif;
+      color: #d87093;
       text-align: center;
-      color: #d4739e;
-      font-size: 2.5rem;
     }
 
     p.subtitle {
       text-align: center;
+      font-size: 1.1rem;
       color: #555;
     }
 
-    a.page-link {
-      color: #d4739e;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    a.page-link:hover {
-      text-decoration: underline;
-    }
-
     .content-block {
-      margin-bottom: 30px;
       padding: 20px;
-      background-color: #fff;
+      margin-bottom: 30px;
       border-radius: 10px;
+      background-color: #fff;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
@@ -101,60 +93,89 @@
       border-radius: 10px;
     }
 
-    ol li {
-      margin-bottom: 10px;
+    .btn-primary {
+      background-color: #d4739e;
+      border: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+
+    .btn-primary:hover {
+      background-color: #c75482;
     }
 
     footer {
+      background-color: #f3c1d8;
+      color: white;
       text-align: center;
       padding: 10px;
-      background-color: #f3c1d8;
-      color: #fff;
       font-weight: bold;
     }
   </style>
 </head>
 
-<body>
+<body id="swimming-page">
   <!-- Header -->
-  <header id="header">
-    <h1 class="sitename">Anna's Website</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="resume.html">Resume</a></li>
-        <li><a href="swimming.html" class="active">Swimming</a></li>
-        <li><a href="riddles.html">Riddles</a></li>
-      </ul>
-    </nav>
+  <header id="header" class="d-flex align-items-center">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+      <h1 class="sitename">Anna's Website</h1>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="swimming.html" class="active">Swimming</a></li>
+          <li><a href="riddles.html">Riddles</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <!-- Main Content -->
   <main>
+    <!-- Title -->
     <h1>All About Swimming</h1>
-    <p class="subtitle">
-      Explore swimming techniques, benefits, and more while visiting my <a href="resume.html" class="page-link">Resume</a> and <a href="riddles.html" class="page-link">Riddles</a> pages!
-    </p>
+    <p class="subtitle">Discover the world of swimming, from its health benefits to fascinating facts, tutorials, and insights!</p>
 
-    <!-- Content Blocks -->
+    <!-- Jump to Techniques -->
+    <div class="text-center mb-4">
+      <a href="#techniques" class="btn btn-primary">Jump to Techniques</a>
+    </div>
+
+    <!-- Video Section -->
     <section class="content-block">
       <h2>Watch a Swimming Tutorial</h2>
-      <p>Learn freestyle techniques and tips from professional swimmers.</p>
+      <p class="text-center">Learn freestyle techniques and tips from professional swimmers.</p>
       <iframe width="560" height="315" src="https://www.youtube.com/embed/4QLRLeOeq3w" allowfullscreen></iframe>
     </section>
 
+    <!-- Informational Section -->
     <section class="content-block">
       <h2>Why Focus on Freestyle?</h2>
-      <p>Freestyle swimming is the fastest and most efficient stroke. It emphasizes strong core engagement, streamlined body position, and proper breathing techniques.</p>
+      <p>Freestyle swimming is considered the fastest and most efficient stroke. It emphasizes strong core engagement, streamlined body position, and effective breathing techniques.</p>
     </section>
 
+    <!-- Tableau Visualization -->
     <section class="content-block">
+      <h2>Explore Live Swimming Insights</h2>
+      <div class='tableauPlaceholder' id='viz1734144261062'>
+        <object class='tableauViz' style='display:none;'>
+          <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+          <param name='name' value='SwimmingInsights&#47;SwimmingtheInsights' />
+          <param name='tabs' value='no' />
+          <param name='toolbar' value='yes' />
+        </object>
+      </div>
+    </section>
+
+    <!-- Techniques Section -->
+    <section id="techniques" class="content-block">
       <h2>Swimming Techniques</h2>
       <ol>
-        <li>Freestyle</li>
-        <li>Backstroke</li>
-        <li>Butterfly</li>
-        <li>Breaststroke</li>
+        <li>Freestyle - Flutter kicks, endurance stroke</li>
+        <li>Backstroke - Relaxing, posture improvement</li>
+        <li>Butterfly - Builds upper body strength</li>
+        <li>Breaststroke - Slow, efficient, beginner-friendly</li>
       </ol>
     </section>
   </main>
@@ -163,9 +184,13 @@
   <footer>
     &copy; 2024 Anna's Website. All Rights Reserved.
   </footer>
+
+  <!-- Scripts -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
+
 
 
 
