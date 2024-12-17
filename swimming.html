@@ -13,8 +13,7 @@
     /* General Styling */
     body {
       font-family: 'Poppins', sans-serif;
-      margin: 0;
-      background: url('https://via.placeholder.com/1920x1080') no-repeat center center fixed; /* Placeholder image */
+      background: url('assets/img/custom_background.avif') no-repeat center center fixed;
       background-size: cover;
       color: #333;
     }
@@ -38,8 +37,8 @@
       list-style: none;
       display: flex;
       justify-content: center;
-      padding: 0;
       margin: 0;
+      padding: 0;
     }
 
     .navmenu ul li {
@@ -57,7 +56,7 @@
       font-weight: bold;
     }
 
-    /* Page Content */
+    /* Main Content */
     main {
       background-color: #fff8f5;
       max-width: 900px;
@@ -73,32 +72,18 @@
       text-align: center;
     }
 
-    p.subtitle {
-      text-align: center;
-      font-size: 1.1rem;
-      color: #555;
-    }
-
     .content-block {
-      padding: 20px;
       margin-bottom: 30px;
-      border-radius: 10px;
+      padding: 20px;
       background-color: #fff;
+      border-radius: 10px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
-    iframe {
+    iframe, img {
       display: block;
       margin: 0 auto;
       border-radius: 10px;
-    }
-
-    img {
-      display: block;
-      margin: 0 auto;
-      max-width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
     footer {
@@ -131,7 +116,7 @@
   <main>
     <!-- Title -->
     <h1>All About Swimming</h1>
-    <p class="subtitle">Explore the techniques, benefits, and live insights into swimming!</p>
+    <p class="text-center">Discover the world of swimming, from its health benefits to fascinating facts, tutorials, and insights!</p>
 
     <!-- Jump to Techniques -->
     <div class="text-center mb-4">
@@ -148,13 +133,13 @@
     <!-- Informational Section -->
     <section class="content-block">
       <h2>Why Focus on Freestyle?</h2>
-      <p>Freestyle swimming is considered the fastest and most efficient stroke. It emphasizes strong core engagement, streamlined body position, and effective breathing techniques.</p>
+      <p>Freestyle swimming is the fastest and most efficient stroke. It emphasizes strong core engagement, streamlined body position, and effective breathing techniques.</p>
     </section>
 
     <!-- Tableau Visualization -->
     <section class="content-block">
       <h2>Explore Live Swimming Insights</h2>
-      <p>Interact with this visualization to uncover swimming trends and performance statistics.</p>
+      <p class="text-center">Interact with this visualization to uncover swimming trends and performance statistics.</p>
       <div class='tableauPlaceholder' id='viz1734144261062'>
         <object class='tableauViz' style='width: 100%; height: 500px;'>
           <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
@@ -170,10 +155,10 @@
     <section class="content-block">
       <h2>Dive into Swimming</h2>
       <p class="text-center">Enjoy the serene experience of swimming, whether for fitness or relaxation.</p>
-      <img src="https://via.placeholder.com/800x400" alt="Swimming Pool">
+      <img src="assets/img/swimming_pool.jpg" alt="Swimming Pool" width="800" height="400">
     </section>
 
-    <!-- Techniques Section -->
+    <!-- Swimming Techniques -->
     <section id="techniques" class="content-block">
       <h2>Swimming Techniques</h2>
       <ol>
@@ -195,8 +180,3 @@
 </body>
 
 </html>
-
-
-
-
-
