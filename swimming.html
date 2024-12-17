@@ -8,13 +8,13 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
   <!-- Bootstrap -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     /* General Styling */
     body {
       font-family: 'Poppins', sans-serif;
       margin: 0;
-      background: url('assets/img/custom_background.avif') no-repeat center center fixed;
+      background: url('https://via.placeholder.com/1920x1080') no-repeat center center fixed; /* Placeholder image */
       background-size: cover;
       color: #333;
     }
@@ -93,16 +93,12 @@
       border-radius: 10px;
     }
 
-    .btn-primary {
-      background-color: #d4739e;
-      border: none;
-      color: white;
-      font-weight: bold;
-      border-radius: 5px;
-    }
-
-    .btn-primary:hover {
-      background-color: #c75482;
+    img {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
     footer {
@@ -115,12 +111,12 @@
   </style>
 </head>
 
-<body id="swimming-page">
+<body>
   <!-- Header -->
-  <header id="header" class="d-flex align-items-center">
-    <div class="container-fluid d-flex justify-content-between align-items-center">
+  <header id="header">
+    <div class="container d-flex justify-content-between align-items-center">
       <h1 class="sitename">Anna's Website</h1>
-      <nav id="navmenu" class="navmenu">
+      <nav class="navmenu">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="resume.html">Resume</a></li>
@@ -135,11 +131,11 @@
   <main>
     <!-- Title -->
     <h1>All About Swimming</h1>
-    <p class="subtitle">Discover the world of swimming, from its health benefits to fascinating facts, tutorials, and insights!</p>
+    <p class="subtitle">Explore the techniques, benefits, and live insights into swimming!</p>
 
     <!-- Jump to Techniques -->
     <div class="text-center mb-4">
-      <a href="#techniques" class="btn btn-primary">Jump to Techniques</a>
+      <a href="#techniques" class="btn btn-primary" style="background-color: #d4739e; border: none;">Jump to Techniques</a>
     </div>
 
     <!-- Video Section -->
@@ -158,14 +154,23 @@
     <!-- Tableau Visualization -->
     <section class="content-block">
       <h2>Explore Live Swimming Insights</h2>
+      <p>Interact with this visualization to uncover swimming trends and performance statistics.</p>
       <div class='tableauPlaceholder' id='viz1734144261062'>
-        <object class='tableauViz' style='display:none;'>
+        <object class='tableauViz' style='width: 100%; height: 500px;'>
           <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
           <param name='name' value='SwimmingInsights&#47;SwimmingtheInsights' />
           <param name='tabs' value='no' />
           <param name='toolbar' value='yes' />
         </object>
       </div>
+      <script src='https://public.tableau.com/javascripts/api/viz_v1.js'></script>
+    </section>
+
+    <!-- Image Section -->
+    <section class="content-block">
+      <h2>Dive into Swimming</h2>
+      <p class="text-center">Enjoy the serene experience of swimming, whether for fitness or relaxation.</p>
+      <img src="https://via.placeholder.com/800x400" alt="Swimming Pool">
     </section>
 
     <!-- Techniques Section -->
@@ -186,11 +191,10 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
-
 
 
 
