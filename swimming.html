@@ -22,14 +22,71 @@
       color: #333;
     }
 
+    /* Header styling */
+    #header {
+      background-color: #f3c1d8; /* Soft pink */
+      border-bottom: 2px solid #d4739e;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .sitename {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: #fff;
+    }
+
+    .navmenu ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    .navmenu ul li {
+      margin: 0 15px;
+    }
+
+    .navmenu ul li a {
+      color: #fff;
+      font-weight: 600;
+      font-family: 'Poppins', sans-serif;
+      text-decoration: none;
+    }
+
+    .navmenu ul li a.active {
+      color: #d4739e;
+      font-weight: bold;
+    }
+
+    .navmenu ul li a:hover {
+      text-decoration: underline;
+    }
+
     /* Heading styles */
     h1, h2 {
       font-family: 'Playfair Display', serif;
-      color: #d87093; /* Soft pink */
+      color: #d4739e; /* Soft pink */
       text-align: center;
     }
 
-    /* Div block styles */
+    p.subtitle {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.1rem;
+      color: #555;
+      text-align: center;
+    }
+
+    a.page-link {
+      color: #d4739e;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    a.page-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Content block styles */
     .content-block {
       padding: 20px;
       margin-bottom: 40px;
@@ -40,8 +97,8 @@
 
     /* Button styles */
     .btn-primary {
-      background-color: #d87093; /* Pink button */
-      border-color: #d87093;
+      background-color: #d4739e; /* Pink button */
+      border-color: #d4739e;
       color: #fff;
       font-weight: bold;
       border-radius: 5px;
@@ -86,10 +143,13 @@
     </div>
   </header>
 
-  <!-- Swimming Content -->
+  <!-- Main Content -->
   <main class="container mt-5">
-    <h1 class="mb-4">All About Swimming</h1>
-    <p class="text-center">Discover the world of swimming, from its health benefits to fascinating facts, helpful tutorials, and live insights.</p>
+    <!-- Page Heading -->
+    <h1 class="mb-3">All About Swimming</h1>
+    <p class="subtitle">
+      Explore swimming techniques, benefits, and more while visiting my <a href="resume.html" class="page-link">Resume</a> and <a href="riddles.html" class="page-link">Riddles</a> pages!
+    </p>
 
     <!-- On-page Anchor -->
     <div class="text-center mb-4">
@@ -100,7 +160,7 @@
     <section class="content-block">
       <h2>Watch a Swimming Tutorial</h2>
       <p class="text-center">Learn freestyle techniques and tips from professional swimmers.</p>
-      <div class="video-container">
+      <div class="video-container text-center">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/4QLRLeOeq3w" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
       </div>
     </section>
@@ -130,17 +190,7 @@
       </div>
     </section>
 
-    <!-- Image Section -->
-    <section class="content-block">
-  <h2>Dive into Swimming</h2>
-  <p class="text-center">
-    Enjoy the serene experience of swimming, whether for fitness or relaxation.
-  </p>
-  <img src="swimming_pool.jpg" alt="Swimming Pool" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
-</section>
-
-
-    <!-- Swimming Techniques Section -->
+    <!-- Swimming Techniques -->
     <section id="techniques" class="content-block">
       <h2>Swimming Techniques</h2>
       <ol>
@@ -177,31 +227,16 @@
   </main>
 
   <!-- Footer -->
-  <footer class="footer text-center py-3">
+  <footer class="footer text-center py-3" style="background-color: #f3c1d8; color: #fff;">
     <p>&copy; 2024 Anna's Website. All Rights Reserved.</p>
   </footer>
 
+  <!-- Bootstrap Bundle -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script type='text/javascript'>
-    var divElement = document.getElementById('viz1734144261062');
-    var vizElement = divElement.getElementsByTagName('object')[0];
-    if (divElement.offsetWidth > 800) {
-      vizElement.style.width = '1000px';
-      vizElement.style.height = '1327px';
-    } else if (divElement.offsetWidth > 500) {
-      vizElement.style.width = '1000px';
-      vizElement.style.height = '1327px';
-    } else {
-      vizElement.style.width = '100%';
-      vizElement.style.height = '2377px';
-    }
-    var scriptElement = document.createElement('script');
-    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-    vizElement.parentNode.insertBefore(scriptElement, vizElement);
-  </script>
 </body>
 
 </html>
+
 
 
 
